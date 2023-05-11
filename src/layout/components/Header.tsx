@@ -105,7 +105,12 @@ function Header({ state, setState }: propTypes) {
               >
                 <Button
                   onClick={handleCloseNavMenu}
-                  sx={{ my: 2, color: "#000", display: "block" }}
+                  sx={{
+                    my: 2,
+                    color: "#fff",
+                    display: "block",
+                    fontWeight: "bold",
+                  }}
                 >
                   {page}
                 </Button>
