@@ -6,10 +6,8 @@ body,
   width: 100%;
   margin: 0;
   padding: 0;
-}
-
-#root {
   background-image: url("images/backgroundLogin.webp");
   background-repeat: no-repeat;
   background-size: cover;
+  overflow-y: auto;
 }

@@ -118,55 +118,50 @@ function Header({ state, setState }: propTypes) {
             ))}
           </Box>
           {isLoggedIn() ? (
-            <>
-              <Box sx={{ flexGrow: 0 }}>
-                <Tooltip title="Open settings">
-                  <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                    <Avatar
-                      alt="Remy Sharp"
-                      src="/static/images/avatar/2.jpg"
-                    />
-                  </IconButton>
-                </Tooltip>
-                <Menu
-                  sx={{ mt: "45px" }}
-                  id="menu-appbar"
-                  anchorEl={anchorElUser}
-                  anchorOrigin={{
-                    vertical: "top",
-                    horizontal: "right",
-                  }}
-                  keepMounted
-                  transformOrigin={{
-                    vertical: "top",
-                    horizontal: "right",
-                  }}
-                  open={Boolean(anchorElUser)}
-                  onClose={handleCloseUserMenu}
-                >
-                  {settings.map((setting) => (
-                    <>
-                      {setting !== "Logout" ? (
-                        <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                          <Link
-                            to={setting.toLowerCase()}
-                            style={{ textDecoration: "none", color: "#000" }}
-                          >
-                            <Typography textAlign="center">
-                              {setting}
-                            </Typography>
-                          </Link>
-                        </MenuItem>
-                      ) : (
+            <Box sx={{ flexGrow: 0 }}>
+              <Tooltip title="Open settings">
+                <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+                  <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                </IconButton>
+              </Tooltip>
+              <Menu
+                sx={{ mt: "45px" }}
+                id="menu-appbar"
+                anchorEl={anchorElUser}
+                anchorOrigin={{
+                  vertical: "top",
+                  horizontal: "right",
+                }}
+                keepMounted
+                transformOrigin={{
+                  vertical: "top",
+                  horizontal: "right",
+                }}
+                open={Boolean(anchorElUser)}
+                onClose={handleCloseUserMenu}
+              >
+                {settings.map((setting) => (
+                  <>
+                    {setting !== "Logout" ? (
+                      <MenuItem key={setting} onClick={handleCloseUserMenu}>
+                        <Link
+                          to={setting.toLowerCase()}
+                          style={{ textDecoration: "none", color: "#000" }}
+                        >
+                          <Typography textAlign="center">{setting}</Typography>
+                        </Link>
+                      </MenuItem>
+                    ) : (
+                      <>
                         <MenuItem onClick={onClickLogout}>
                           <Typography textAlign="center">Logout</Typography>
                         </MenuItem>
-                      )}
-                    </>
-                  ))}
-                </Menu>
-              </Box>
-            </>
+                      </>
+                    )}
+                  </>
+                ))}
+              </Menu>
+            </Box>
           ) : null}
         </Toolbar>
       </Container>
