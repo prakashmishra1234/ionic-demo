@@ -26,7 +26,7 @@ const Login: React.FC<{}> = () => {
         sx={{
           padding: "1rem",
           width: { sm: "35%" },
-          margin: "1rem 0",
+          margin: "0.8rem",
         }}
       >
         <Formik
