@@ -1,11 +1,15 @@
 html,
 body,
 #root {
-  background: #fff;
-  color: #000;
+  color: #fff;
   height: 100%;
   width: 100%;
   margin: 0;
   padding: 0;
-  background-image: url(backgroundLogin.webp);
+}
+
+#root {
+  background-image: url("backgroundLogin.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
 }

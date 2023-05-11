@@ -57,7 +57,7 @@ export default function Sidebar({ state, setState }: propTypes) {
                     alignItems: "center",
                   }}
                 >
-                  <Button sx={{ my: 2, color: "#000", display: "block" }}>
+                  <Button sx={{ my: 2, color: "#fff", display: "block" }}>
                     {page}
                   </Button>
                 </Link>

@@ -44,7 +44,7 @@ const Login: React.FC<{}> = () => {
                   marginBottom: "1rem",
                   justifyContent: "center",
                   fontSize: { xs: "1rem", md: "2rem" },
-                  fontWeight: "700",
+                  fontWeight: "bold",
                 }}
               >
                 Welcome Back
